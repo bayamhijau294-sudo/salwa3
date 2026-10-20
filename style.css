@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --navy: #163b67;
+  --blue: #2f75b5;
+  --pale: #eef5fc;
+  --ink: #243247;
+  --muted: #617187;
+}
+
+body {
+  margin: 0;
+  padding: 28px 14px;
+  background: #e8eef5;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.55;
+}
+
+.cv {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(25, 55, 90, 0.16);
+}
+
+.sidebar {
+  background: var(--navy);
+  color: #fff;
+  padding: 34px 25px;
+}
+
+.photo {
+  width: 155px;
+  height: 190px;
+  margin: 0 auto 22px;
+  border: 4px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #2475c5;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.sidebar h2 {
+  font-size: 16px;
+  margin: 25px 0 10px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar p,
+.sidebar li {
+  font-size: 13.5px;
+}
+
+.sidebar ul {
+  padding-left: 18px;
+  margin: 8px 0;
+}
+
+.main {
+  padding: 38px 36px;
+}
+
+.name {
+  color: var(--navy);
+  font-size: clamp(28px, 4vw, 39px);
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  color: var(--blue);
+  font-weight: bold;
+  margin: 9px 0 24px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.section {
+  margin-top: 25px;
+}
+
+.section h2 {
+  color: var(--navy);
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d8e6f5;
+}
+
+.section p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.item h3 {
+  font-size: 15px;
+  margin: 0 0 4px;
+  color: #253c59;
+}
+
+.item p {
+  color: var(--muted);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills span {
+  background: var(--pale);
+  border: 1px solid #d5e5f5;
+  color: var(--navy);
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12.5px;
+}
+
+@media (max-width: 650px) {
+  body {
+    padding: 10px;
+  }
+
+  .cv {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    padding: 25px;
+  }
+
+  .main {
+    padding: 28px 23px;
+  }
+
+  .photo {
+    width: 140px;
+    height: 170px;
+  }
+}
+
+@media print {
+  body {
+    padding: 0;
+    background: #fff;
+  }
+
+  .cv {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: none;
+  }
+}
